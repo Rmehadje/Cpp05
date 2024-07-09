@@ -27,9 +27,8 @@ class Form{
 		bool					isitSigned;
 		const int			gradeSign;
 		const int			gradeExec;
-		Form();
-	public:
 		Form(const std::string name, int gradeSign, int gradeExec);
+	public:
 		~Form();
 		Form(const Form &og);
 		Form &operator=(const Form &cp);

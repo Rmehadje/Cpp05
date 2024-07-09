@@ -19,13 +19,13 @@ class RobotomyRequestForm : public AForm
 {
 	private:
 		std::string target;
-		public:
-			RobotomyRequestForm();
-			RobotomyRequestForm(std::string target);
-			RobotomyRequestForm(RobotomyRequestForm const &cp);
-			~RobotomyRequestForm();
-			RobotomyRequestForm &operator=(const RobotomyRequestForm &og);
-			void execute(Bureaucrat const &executor) const;
+		RobotomyRequestForm();
+	public:
+		RobotomyRequestForm(std::string target);
+		RobotomyRequestForm(RobotomyRequestForm const &cp);
+		~RobotomyRequestForm();
+		RobotomyRequestForm &operator=(const RobotomyRequestForm &og);
+		void execute(Bureaucrat const &executor) const;
 };
 
 std::ostream &operator<<(std::ostream &out, const RobotomyRequestForm &value);

@@ -19,13 +19,13 @@ class ShrubberyCreationForm : public AForm
 {
 	private:
 		std::string target;
-		public:
-			ShrubberyCreationForm();
-			ShrubberyCreationForm(std::string target);
-			ShrubberyCreationForm(ShrubberyCreationForm const &cp);
-			~ShrubberyCreationForm();
-			ShrubberyCreationForm &operator=(const ShrubberyCreationForm &og);
-			void execute(Bureaucrat const &executor) const;
+		ShrubberyCreationForm();
+	public:
+		ShrubberyCreationForm(std::string target);
+		ShrubberyCreationForm(ShrubberyCreationForm const &cp);
+		~ShrubberyCreationForm();
+		ShrubberyCreationForm &operator=(const ShrubberyCreationForm &og);
+		void execute(Bureaucrat const &executor) const;
 };
 
 std::ostream &operator<<(std::ostream &out, const ShrubberyCreationForm &value);

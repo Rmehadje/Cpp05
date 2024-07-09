@@ -24,7 +24,9 @@ PresidentialPardonForm::PresidentialPardonForm(PresidentialPardonForm const &cp)
 	*this = cp;
 }
 
-PresidentialPardonForm::~PresidentialPardonForm(){}
+PresidentialPardonForm::~PresidentialPardonForm(){
+	delete this;
+}
 
 PresidentialPardonForm &PresidentialPardonForm::operator=(const PresidentialPardonForm &og){
 	this->target = og.target;

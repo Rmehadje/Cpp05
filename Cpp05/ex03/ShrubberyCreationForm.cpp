@@ -24,7 +24,9 @@ ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm const &cp) : 
 	*this = cp;
 }
 
-ShrubberyCreationForm::~ShrubberyCreationForm(){}
+ShrubberyCreationForm::~ShrubberyCreationForm(){
+	delete this;
+}
 
 ShrubberyCreationForm &ShrubberyCreationForm::operator=(const ShrubberyCreationForm &og){
 	this->target = og.target;

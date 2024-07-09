@@ -27,10 +27,8 @@ class AForm{
 		bool					isitSigned;
 		const int			gradeSign;
 		const int			gradeExec;
-		AForm();
-	public:
-		AForm(const std::string name, int gradeSign);
 		AForm(const std::string name, int gradeSign, int gradeExec);
+	public:
 		virtual ~AForm();
 		AForm(const AForm &og);
 		AForm &operator=(const AForm &cp);

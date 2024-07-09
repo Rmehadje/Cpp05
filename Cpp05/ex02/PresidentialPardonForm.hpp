@@ -19,13 +19,13 @@ class PresidentialPardonForm : public AForm
 {
 	private:
 		std::string target;
-		public:
-			PresidentialPardonForm();
-			PresidentialPardonForm(std::string target);
-			PresidentialPardonForm(PresidentialPardonForm const &cp);
-			~PresidentialPardonForm();
-			PresidentialPardonForm &operator=(const PresidentialPardonForm &og);
-			void execute(Bureaucrat const &executor) const;
+	public:
+		PresidentialPardonForm();
+		PresidentialPardonForm(std::string target);
+		PresidentialPardonForm(PresidentialPardonForm const &cp);
+		~PresidentialPardonForm();
+		PresidentialPardonForm &operator=(const PresidentialPardonForm &og);
+		void execute(Bureaucrat const &executor) const;
 };
 
 std::ostream &operator<<(std::ostream &out, const PresidentialPardonForm &value);

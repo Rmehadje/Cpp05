@@ -24,7 +24,9 @@ RobotomyRequestForm::RobotomyRequestForm(RobotomyRequestForm const &cp) : AForm(
 	*this = cp;
 }
 
-RobotomyRequestForm::~RobotomyRequestForm(){}
+RobotomyRequestForm::~RobotomyRequestForm(){
+	delete this;
+}
 
 RobotomyRequestForm &RobotomyRequestForm::operator=(const RobotomyRequestForm &og){
 	this->target = og.target;
