@@ -6,7 +6,7 @@
 /*   By: rmehadje <rmehadje@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 16:13:09 by rmehadje          #+#    #+#             */
-/*   Updated: 2024/07/04 16:15:07 by rmehadje         ###   ########.fr       */
+/*   Updated: 2024/07/05 11:53:15 by rmehadje         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,11 +53,11 @@ void	Bureaucrat::decrement(void){
 		grade++;
 }
 
-void	Bureaucrat::signForm(Form &form){
+void	Bureaucrat::signForm(AForm &form){
 	try{
 		form.beSigned(*this);
 		std::cout << *this << " signed " << form.getName() << std::endl;
-	} catch (Form::GradeTooLowException &e){
+	} catch (AForm::GradeTooLowException &e){
 			std::cout<< name << " couldn't sign " << form.getName() << " because " << e.what() << std::endl;
 	}
 }
@@ -65,4 +65,13 @@ void	Bureaucrat::signForm(Form &form){
 std::ostream &operator<<(std::ostream &out, const Bureaucrat &c){
 	out << c.getName() << ", bureaucrat grade " << c.getGrade() << std::endl;
 	return (out);
+}
+
+void	Bureaucrat::executeForm(AForm const &form){
+	try{
+		form.execute(*this);
+		std::cout << form.getName() << " executed" << std::endl;
+	}catch(const std::exception &e){
+		std::cout << form.getName() << " not executed" << std::endl;
+	}
 }

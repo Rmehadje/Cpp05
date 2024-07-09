@@ -6,30 +6,25 @@
 /*   By: rmehadje <rmehadje@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 13:06:12 by rmehadje          #+#    #+#             */
-/*   Updated: 2024/07/02 13:57:17 by rmehadje         ###   ########.fr       */
+/*   Updated: 2024/07/05 12:04:22 by rmehadje         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
-int	main(){
-	try{
-		Bureaucrat a("yemak", 1);
-		std::cout << a;
-		a.increment();
-	} catch (std::exception& e){
-		std::cout << e.what() << std::endl;
-	}
-	try{
-		Bureaucrat b("khtek", 150);
-		b.increment();
-		std::cout << b;
-		b.decrement();
-		std::cout << b;
-		b.decrement();
-		std::cout << b;
+int main( void )
+{
 
-	} catch (std::exception& c){
-		std::cout << c.what() << std::endl;
-	}
+    try {
+        Bureaucrat bureaucrat("ash",11);
+        Form form("formName", 10);
+
+        bureaucrat.signForm(form);
+        
+        std::cout << form << std::endl;
+    } catch (std::exception &e) {
+        std::cout << e.what() << std::endl;
+    }
+    return 0;
 }

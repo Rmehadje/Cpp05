@@ -6,16 +6,16 @@
 /*   By: rmehadje <rmehadje@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/01 14:52:22 by rmehadje          #+#    #+#             */
-/*   Updated: 2024/07/04 16:15:22 by rmehadje         ###   ########.fr       */
+/*   Updated: 2024/07/05 11:52:08 by rmehadje         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #include <string>
 #include <iostream>
-#include "Form.hpp"
+#include "AForm.hpp"
 
-class Form;
+class AForm;
 
 class	Bureaucrat{
 	private:
@@ -35,7 +35,8 @@ class	Bureaucrat{
 		const	std::string &getName(void) const;
 		int	getGrade(void) const;
 
-		void	signForm(Form &form);
+		void	signForm(AForm &Aform);
+		void	executeForm(AForm const &Aform);
 		class GradeTooHighException: public std::exception{
 			virtual const char* what(void) const throw() {return "Grade is too high";};
 		};

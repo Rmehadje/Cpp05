@@ -1,6 +1,6 @@
-NAME = ex01
+NAME = ex03
 
-SRC = main.cpp Bureaucrat.cpp Form.cpp
+SRC = main.cpp Bureaucrat.cpp AForm.cpp PresidentialPardonForm.cpp Intern.cpp RobotomyRequestForm.cpp ShrubberyCreationForm.cpp
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
@@ -18,6 +18,8 @@ clean:
 
 fclean:	clean
 	@rm -f $(NAME)
+	@rm -f treeshrubbery
+
 
 re:	fclean all
 
